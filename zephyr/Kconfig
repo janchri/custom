@@ -1,0 +1,12 @@
+# Copyright (c) 2025 Christoph Jans
+# SPDX-License-Identifier: Apache-2.0
+
+config LIBCUSTOM
+	bool "Enable libcustom"
+	help
+	  This option enables the libcustom as a Zephyr module.
+
+config APP_LINK_WITH_CUSTOM
+	bool "Make libsample header file available to application"
+	default y
+	depends on LIBCUSTOM
